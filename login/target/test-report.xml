@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="34.75579">
+<testcase classname="login feature" name="with correct username and wrong password" time="22.49103">
+<failure message="org.junit.ComparisonFailure: expected:&lt;...ernet.herokuapp.com/[login]&gt; but was:&lt;...ernet.herokuapp.com/[secure]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at login.Helper.AssertCorrect(Helper.java:27)&#13;&#10;&#9;at login.MyStepDefinitions.i_should_see_the_correct(MyStepDefinitions.java:50)&#13;&#10;&#9;at ✽.Then I should see the correct &quot;https://the-internet.herokuapp.com/secure&quot;(src/test/resources/login.feature:7)&#13;&#10;"><![CDATA[Given I visit the-internet.herokuapp.com/login..............................passed
+When I enter correct user in "tomsmith" filed and I enter wrong Password as "SuperSecretPassword!" filed and i press on login button.passed
+Then I should see the correct "https://the-internet.herokuapp.com/secure"...failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...ernet.herokuapp.com/[login]> but was:<...ernet.herokuapp.com/[secure]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at login.Helper.AssertCorrect(Helper.java:27)
+	at login.MyStepDefinitions.i_should_see_the_correct(MyStepDefinitions.java:50)
+	at ✽.Then I should see the correct "https://the-internet.herokuapp.com/secure"(src/test/resources/login.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="login feature" name="with correct username and correct password" time="12.26476">
+<system-out><![CDATA[Given I visit the-internet.herokuapp.com/login..............................passed
+When I enter correct user in "tomsmith" filed correct and I enter correct Password as "SuperSecretPassword" and i press on login button.passed
+Then I should see the not login "https://the-internet.herokuapp.com/login"..passed
+]]></system-out>
+</testcase>
+</testsuite>
